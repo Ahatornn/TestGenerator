@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ahatornn.TestGenerator", "Ahatornn.TestGenerator\Ahatornn.TestGenerator.csproj", "{B13642D0-EB69-41E0-B42B-5F46FDBF0C3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{309EF795-9F74-4BCD-B343-42C01CCC7FDF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahatornn.TestGenerator.Tests", "Ahatornn.TestGenerator.Tests\Ahatornn.TestGenerator.Tests.csproj", "{DF2AE76E-D3F8-4EA9-B86E-9B4CFD5E8D36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B13642D0-EB69-41E0-B42B-5F46FDBF0C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13642D0-EB69-41E0-B42B-5F46FDBF0C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13642D0-EB69-41E0-B42B-5F46FDBF0C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13642D0-EB69-41E0-B42B-5F46FDBF0C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2AE76E-D3F8-4EA9-B86E-9B4CFD5E8D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2AE76E-D3F8-4EA9-B86E-9B4CFD5E8D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2AE76E-D3F8-4EA9-B86E-9B4CFD5E8D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2AE76E-D3F8-4EA9-B86E-9B4CFD5E8D36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BC9C64E-B85D-42F1-B98A-D89E24F95B5F}
+	EndGlobalSection
+EndGlobal
