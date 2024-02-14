@@ -1,20 +1,9 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace Ahatornn.TestGenerator.PropertyValueGenerators
 {
-    internal class GuidPropertyValueGenerator : IPropertyValueGenerator
+    internal class GuidPropertyValueGenerator : BasePropertyValueGenerator<Guid>
     {
-        Type IPropertyValueGenerator.PropertyValueType => typeof(Guid);
-
-        void IPropertyValueGenerator.Generate<TEntity>([NotNull] TEntity entity, [NotNull] PropertyInfo propertyInfo)
-            where TEntity : class
-        {
-            if (!(propertyInfo.CanWrite && propertyInfo.PropertyType == typeof(Guid)))
-            {
-                throw new InvalidOperationException($"Свойство {propertyInfo.Name} не может быть записано для {nameof(GuidPropertyValueGenerator)}");
-            }
-            propertyInfo.SetValue(entity, Guid.NewGuid());
-        }
+        protected override Guid GetPropertyValue(PropertyInfo propertyInfo) => Guid.NewGuid();
     }
 }
