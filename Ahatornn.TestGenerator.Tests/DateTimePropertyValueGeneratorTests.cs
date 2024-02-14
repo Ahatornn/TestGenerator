@@ -9,12 +9,7 @@ namespace Ahatornn.TestGenerator.Tests
     /// </summary>
     public class DateTimePropertyValueGeneratorTests
     {
-        private readonly IPropertyValueGenerator generator;
-
-        public DateTimePropertyValueGeneratorTests()
-        {
-            generator = new DateTimePropertyValueGenerator();
-        }
+        private readonly IPropertyValueGenerator generator = new DateTimePropertyValueGenerator();
 
         [Fact]
         public void ShouldReturnStringType()

@@ -12,7 +12,7 @@ namespace Ahatornn.TestGenerator.PropertyValueGenerators
         {
             if (!(propertyInfo.CanWrite && propertyInfo.PropertyType == typeof(TType)))
             {
-                throw new InvalidOperationException($"Свойство {propertyInfo.Name} не может быть записано для {MethodBase.GetCurrentMethod()?.DeclaringType?.Name}");
+                throw new InvalidOperationException($"Свойство {propertyInfo.Name} не может быть записано для {GetType().Name}");
             }
 
             propertyInfo.SetValue(entity, GetPropertyValue(propertyInfo));

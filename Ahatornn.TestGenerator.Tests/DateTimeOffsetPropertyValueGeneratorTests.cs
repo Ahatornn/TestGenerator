@@ -9,12 +9,7 @@ namespace Ahatornn.TestGenerator.Tests
     /// </summary>
     public class DateTimeOffsetPropertyValueGeneratorTests
     {
-        private readonly IPropertyValueGenerator generator;
-
-        public DateTimeOffsetPropertyValueGeneratorTests()
-        {
-            generator = new DateTimeOffsetPropertyValueGenerator();
-        }
+        private readonly IPropertyValueGenerator generator = new DateTimeOffsetPropertyValueGenerator();
 
         [Fact]
         public void ShouldReturnStringType()

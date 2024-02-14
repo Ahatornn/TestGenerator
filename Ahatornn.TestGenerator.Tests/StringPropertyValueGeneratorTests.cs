@@ -9,12 +9,7 @@ namespace Ahatornn.TestGenerator.Tests
     /// </summary>
     public class StringPropertyValueGeneratorTests
     {
-        private readonly IPropertyValueGenerator generator;
-
-        public StringPropertyValueGeneratorTests()
-        {
-            generator = new StringPropertyValueGenerator();
-        }
+        private readonly IPropertyValueGenerator generator = new StringPropertyValueGenerator();
 
         [Fact]
         public void ShouldReturnStringType()

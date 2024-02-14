@@ -9,12 +9,7 @@ namespace Ahatornn.TestGenerator.Tests
     /// </summary>
     public class GuidPropertyValueGeneratorTests
     {
-        private readonly IPropertyValueGenerator generator;
-
-        public GuidPropertyValueGeneratorTests()
-        {
-            generator = new GuidPropertyValueGenerator();
-        }
+        private readonly IPropertyValueGenerator generator = new GuidPropertyValueGenerator();
 
         [Fact]
         public void ShouldReturnStringType()
