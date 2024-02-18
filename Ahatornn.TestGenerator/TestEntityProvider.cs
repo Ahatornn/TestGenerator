@@ -7,22 +7,31 @@ namespace Ahatornn.TestGenerator
     /// </summary>
     public class TestEntityProvider
     {
+        private readonly bool isSharedInsurance;
         private readonly IDictionary<Type, object> presets = new Dictionary<Type, object>();
         private readonly IDictionary<Type, IPropertyValueGenerator> valueGenerators = new Dictionary<Type, IPropertyValueGenerator>();
+        private readonly static Lazy<TestEntityProvider> sharedInstance = new(() => new TestEntityProvider(isSharedInsurance: true));
 
-        internal TestEntityProvider()
+        internal TestEntityProvider(bool isSharedInsurance)
         {
             Initialize();
+            this.isSharedInsurance = isSharedInsurance;
         }
 
         internal TestEntityProvider(params IPropertyValueGenerator[] generators)
         {
+            isSharedInsurance = false;
             foreach (var generator in generators)
             {
                 valueGenerators.TryAdd(generator.PropertyValueType, generator);
             }
             Initialize();
         }
+
+        /// <summary>
+        /// Предоставляет доступ к общему <see cref="TestEntityProvider"/>
+        /// </summary>
+        public static TestEntityProvider Shared { get; } = sharedInstance.Value;
 
         /// <summary>
         /// Добавляет обработчик действий при создании сущности 
@@ -33,6 +42,10 @@ namespace Ahatornn.TestGenerator
         public TestEntityProvider AddPreset<TEntity>(params Action<TEntity>[] entitySettings)
             where TEntity : class
         {
+            if (isSharedInsurance)
+            {
+                throw new InvalidOperationException("Невозможно установить обработчик действия для общедоступного объекта");
+            }
             if (entitySettings?.Any() == true)
             {
                 foreach (var entityAction in entitySettings)

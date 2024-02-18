@@ -1,11 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-      <GenerateDocumentationFile>True</GenerateDocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Authors>Konoplev Anatolii</Authors>
+        <Product>Test generator</Product>
+        <Description>Create entity with defined values of properties</Description>
+        <Version>1.0.18</Version>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <RepositoryUrl>https://github.com/Ahatornn/TestGenerator</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <PackageTags>Test</PackageTags>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Copyright>2024 Konoplev Anatolii</Copyright>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageIcon>favico.png</PackageIcon>
+        <PackageProjectUrl>https://github.com/Ahatornn/TestGenerator</PackageProjectUrl>
+        <PackageReleaseNotes>Created shared TestEntityProvider</PackageReleaseNotes>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="favico.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
 
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
