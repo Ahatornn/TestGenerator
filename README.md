@@ -61,7 +61,7 @@ public class BoolAlwaysTrueValueGenerator : IPropertyValueGenerator
 
 Now let's create an ```TestEntityProvider``` by passing a custom IPropertyValueGenerator
 ```cs
-var provider = GeneratorFactory.CreateProvider(new BoolAlwaysTrueValueGenerator());
+var provider = TestGeneratorFactory.CreateProvider(new BoolAlwaysTrueValueGenerator());
 ```
 
 And finally use ```provider``` to generate data
