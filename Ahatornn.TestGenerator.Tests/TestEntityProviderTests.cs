@@ -12,7 +12,7 @@ namespace Ahatornn.TestGenerator.Tests
         public void SimpleGenerator()
         {
             //Arrange
-            var testEntityProvider = TestGeneratorFactory.Create();
+            var testEntityProvider = new TestEntityProviderBuilder().Build();
 
             //Act
             var result = testEntityProvider.Create<SimpleTestModel>();
@@ -42,7 +42,7 @@ namespace Ahatornn.TestGenerator.Tests
         public void ActionGenerator()
         {
             //Arrange
-            var testEntityProvider = TestGeneratorFactory.Create();
+            var testEntityProvider = new TestEntityProviderBuilder().Build();
             var nameValue = $"{Guid.NewGuid():D}";
             var createdAtValue = new DateTime(2024, 2, 6);
 
@@ -78,12 +78,13 @@ namespace Ahatornn.TestGenerator.Tests
         {
             //Arrange
             var createdAtValue = new DateTime(2024, 2, 6);
-            var testEntityProvider = TestGeneratorFactory.Create()
+            var testEntityProvider = new TestEntityProviderBuilder()
                 .AddPreset<SimpleTestModel>(x =>
                 {
                     x.Cost = 11.7m;
                     x.CreatedAtDefault = createdAtValue;
-                });
+                })
+                .Build();
             var nameValue = $"{Guid.NewGuid():D}";
 
             //Act
@@ -117,7 +118,9 @@ namespace Ahatornn.TestGenerator.Tests
         public void CustomPropertyValueGenerator()
         {
             //Arrange
-            var testEntityProvider = TestGeneratorFactory.Create(new TestDecimalPropertyValueGenerator());
+            var testEntityProvider = new TestEntityProviderBuilder()
+                .AddGenerator(new TestDecimalPropertyValueGenerator())
+                .Build();
 
             //Act
             var result = testEntityProvider.Create<SimpleTestModel>();

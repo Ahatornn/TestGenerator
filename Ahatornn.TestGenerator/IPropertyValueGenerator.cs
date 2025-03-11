@@ -15,7 +15,6 @@ namespace Ahatornn.TestGenerator
         /// <summary>
         /// Генерирует значение для свойства
         /// </summary>
-        void Generate<TEntity>(TEntity entity, PropertyInfo propertyInfo)
-            where TEntity : class;
+        void Generate<TEntity>(TEntity entity, PropertyInfo propertyInfo) where TEntity : class;
     }
 }
