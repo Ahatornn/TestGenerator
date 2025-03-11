@@ -15,7 +15,7 @@
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <Copyright>2024 Konoplev Anatolii</Copyright>
-        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>favico.png</PackageIcon>
         <PackageProjectUrl>https://github.com/Ahatornn/TestGenerator</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>

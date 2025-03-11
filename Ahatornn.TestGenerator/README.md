@@ -30,12 +30,10 @@ var actCarrier1 = new ActCarrier
 ```
 
 By default, TestEntityProvider generates data for the following property types (if they are writable)
-| Type | Generated value |
-|-------|----------|
-| String | ```$"{propertyInfo.Name}{Guid.NewGuid():N}"``` |
-| DateTime | ```DateTime.Now``` |
-| DateTimeOffset | ```DateTimeOffset.Now``` |
-| Guid | ```Guid.NewGuid()``` |
+- String: ```$"{propertyInfo.Name}{Guid.NewGuid():N}"```
+- DateTime: ```DateTime.Now```
+- DateTimeOffset: ```DateTimeOffset.Now```
+- Guid: ```Guid.NewGuid()```
 
 You can expand the list of available data generators by implementing the interface ```IPropertyValueGenerator```. However, in this case you will need to use the ```TestEntityProvider``` instance obtained using the ```TestGeneratorFactory```, rather than using ```TestEntityProvider.Shared```.
 Let's see how to implement a data generator for all ```boolean``` types.
