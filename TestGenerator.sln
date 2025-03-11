@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{309EF795-9F74-4BCD-B343-42C01CCC7FDF}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahatornn.TestGenerator.Tests", "Ahatornn.TestGenerator.Tests\Ahatornn.TestGenerator.Tests.csproj", "{DF2AE76E-D3F8-4EA9-B86E-9B4CFD5E8D36}"

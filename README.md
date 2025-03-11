@@ -59,9 +59,11 @@ public class BoolAlwaysTrueValueGenerator : IPropertyValueGenerator
 }
 ```
 
-Now let's create an ```TestEntityProvider``` by passing a custom IPropertyValueGenerator
+Now let's create an ```TestEntityProviderBuilder``` by passing a custom IPropertyValueGenerator
 ```cs
-var provider = TestGeneratorFactory.CreateProvider(new BoolAlwaysTrueValueGenerator());
+var provider = new TestEntityProviderBuilder
+    .AddGenerator(new BoolAlwaysTrueValueGenerator())
+    .Build();
 ```
 
 And finally use ```provider``` to generate data
@@ -71,7 +73,8 @@ var result = provider.Create<SimpleTestModel>();
 
 If you regularly need to set the same values for certain properties when using ```TestEntityProvider```, use the ```AddPreset``` mechanism. Just specify the necessary values for properties of a certain type when creating the ```TestEntityProvider```
 ```cs
-var provider = TestGeneratorFactory.Create()
-  .AddPreset<SimpleTestModel>(x => x.Cost = 11.7m);
+var provider = new TestEntityProviderBuilder
+  .AddPreset<SimpleTestModel>(x => x.Cost = 11.7m)
+  .Build();
 ```
 Now every time you call ```provider.Create<SimpleTestModel>()``` you will receive a value of ```11.7m``` for the ```Cost``` property of each model obtained using ```TestEntityProvider```. Of course, if necessary, you can override the previously specified value ```provider.Create<SimpleTestModel>(x => x.Cost = 8.3m)```
