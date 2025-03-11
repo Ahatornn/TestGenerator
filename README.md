@@ -37,7 +37,7 @@ By default, TestEntityProvider generates data for the following property types (
 | DateTimeOffset | ```DateTimeOffset.Now``` |
 | Guid | ```Guid.NewGuid()``` |
 
-You can expand the list of available data generators by implementing the interface ```IPropertyValueGenerator```. However, in this case you will need to use the ```TestEntityProvider``` instance obtained using the ```TestGeneratorFactory```, rather than using ```TestEntityProvider.Shared```.
+You can expand the list of available data generators by implementing the interface ```IPropertyValueGenerator```. However, in this case you will need to use the ```TestEntityProvider``` instance obtained using the ```TestEntityProviderBuilder```, rather than using ```TestEntityProvider.Shared```.
 Let's see how to implement a data generator for all ```boolean``` types.
 
 First, let's implement IPropertyValueGenerator for the ```boolean``` type
