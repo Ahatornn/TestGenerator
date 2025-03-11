@@ -7,7 +7,7 @@
         <Authors>Konoplev Anatolii</Authors>
         <Product>Test generator</Product>
         <Description>Create entity with defined values of properties</Description>
-        <Version>1.1.26</Version>
+        <Version>1.1.27</Version>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <RepositoryUrl>https://github.com/Ahatornn/TestGenerator</RepositoryUrl>
         <RepositoryType>Git</RepositoryType>
@@ -21,6 +21,8 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageReleaseNotes>
             <![CDATA[
+  v 1.1.27:
+  - Now MIT license
   v 1.1.25:
   - Use TestEntityProviderBuilder for add some Presets or Generators
   v 1.0.18:
