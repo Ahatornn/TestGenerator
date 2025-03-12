@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFrameworks>net8.0;net6.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Authors>Konoplev Anatolii</Authors>
         <Product>Test generator</Product>
         <Description>Create entity with defined values of properties</Description>
-        <Version>1.1.28</Version>
+        <Version>1.1.29</Version>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <RepositoryUrl>https://github.com/Ahatornn/TestGenerator</RepositoryUrl>
         <RepositoryType>Git</RepositoryType>
@@ -21,6 +21,8 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageReleaseNotes>
             <![CDATA[
+  v 1.1.29:
+  - TargetFrameworks: net8.0, net6.0
   v 1.1.28:
   - Now MIT license
   v 1.1.25:
@@ -33,7 +35,7 @@
 
     <ItemGroup>
         <None Include="favico.png" Pack="true" PackagePath="" />
-        <None Include="README.md" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>
